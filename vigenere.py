@@ -1,7 +1,7 @@
 def encrypt(message,key):
     encryptedText=''
     i=0
-    for x in range(len(message)):
+    for x in range(len(message)):                       # you can use cycle() from itertools to cycle over a key instead of this
         temp=ord(message[x])+ord(key[i])-97
         if temp>122:
             encryptedText+= chr(temp-122+96)
